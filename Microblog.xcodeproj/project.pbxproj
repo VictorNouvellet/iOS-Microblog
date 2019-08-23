@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26730E53A9311A5732894EAE /* Pods_MicroblogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */; };
 		571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA54623109F770076FCA7 /* AppDelegate.swift */; };
 		571FA54923109F770076FCA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA54823109F770076FCA7 /* ViewController.swift */; };
 		571FA54C23109F770076FCA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54A23109F770076FCA7 /* Main.storyboard */; };
 		571FA54E23109F7B0076FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54D23109F7B0076FCA7 /* Assets.xcassets */; };
 		571FA55123109F7B0076FCA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54F23109F7B0076FCA7 /* LaunchScreen.storyboard */; };
 		571FA55C23109F7B0076FCA7 /* MicroblogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA55B23109F7B0076FCA7 /* MicroblogTests.swift */; };
+		A674A0425C4FF2349ABA980F /* Pods_Microblog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4639DEF22C68ED9E06C14572 /* Pods-Microblog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.release.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.release.xcconfig"; sourceTree = "<group>"; };
 		571FA54323109F770076FCA7 /* Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Microblog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FA54623109F770076FCA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		571FA54823109F770076FCA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		571FA55723109F7B0076FCA7 /* MicroblogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroblogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FA55B23109F7B0076FCA7 /* MicroblogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroblogTests.swift; sourceTree = "<group>"; };
 		571FA55D23109F7B0076FCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogTests.release.xcconfig"; path = "Target Support Files/Pods-MicroblogTests/Pods-MicroblogTests.release.xcconfig"; sourceTree = "<group>"; };
+		808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.debug.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.debug.xcconfig"; sourceTree = "<group>"; };
+		83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroblogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F093845D129F3F7F37E27F36 /* Pods-MicroblogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogTests.debug.xcconfig"; path = "Target Support Files/Pods-MicroblogTests/Pods-MicroblogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Microblog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A674A0425C4FF2349ABA980F /* Pods_Microblog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26730E53A9311A5732894EAE /* Pods_MicroblogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42C4B7C7BF7EA74FBE7B2B73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */,
+				83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		571FA53A23109F770076FCA7 = {
 			isa = PBXGroup;
 			children = (
 				571FA54523109F770076FCA7 /* Microblog */,
 				571FA55A23109F7B0076FCA7 /* MicroblogTests */,
 				571FA54423109F770076FCA7 /* Products */,
+				5910E28036E72E0FEBEE6022 /* Pods */,
+				42C4B7C7BF7EA74FBE7B2B73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,18 @@
 			path = MicroblogTests;
 			sourceTree = "<group>";
 		};
+		5910E28036E72E0FEBEE6022 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */,
+				4639DEF22C68ED9E06C14572 /* Pods-Microblog.release.xcconfig */,
+				F093845D129F3F7F37E27F36 /* Pods-MicroblogTests.debug.xcconfig */,
+				6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 571FA56023109F7B0076FCA7 /* Build configuration list for PBXNativeTarget "Microblog" */;
 			buildPhases = (
+				6BE6FBCD0B29B0FE1A81D365 /* [CP] Check Pods Manifest.lock */,
 				571FA53F23109F770076FCA7 /* Sources */,
 				571FA54023109F770076FCA7 /* Frameworks */,
 				571FA54123109F770076FCA7 /* Resources */,
+				0E3FD5379C708BFB39DEA5FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 571FA56323109F7B0076FCA7 /* Build configuration list for PBXNativeTarget "MicroblogTests" */;
 			buildPhases = (
+				53F326D995CCDEA533A51AC9 /* [CP] Check Pods Manifest.lock */,
 				571FA55323109F7B0076FCA7 /* Sources */,
 				571FA55423109F7B0076FCA7 /* Frameworks */,
 				571FA55523109F7B0076FCA7 /* Resources */,
@@ -191,6 +227,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E3FD5379C708BFB39DEA5FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Microblog/Pods-Microblog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Microblog/Pods-Microblog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Microblog/Pods-Microblog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53F326D995CCDEA533A51AC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MicroblogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BE6FBCD0B29B0FE1A81D365 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Microblog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		571FA53F23109F770076FCA7 /* Sources */ = {
@@ -358,6 +458,7 @@
 		};
 		571FA56123109F7B0076FCA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +477,7 @@
 		};
 		571FA56223109F7B0076FCA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4639DEF22C68ED9E06C14572 /* Pods-Microblog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +496,7 @@
 		};
 		571FA56423109F7B0076FCA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F093845D129F3F7F37E27F36 /* Pods-MicroblogTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +518,7 @@
 		};
 		571FA56523109F7B0076FCA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
