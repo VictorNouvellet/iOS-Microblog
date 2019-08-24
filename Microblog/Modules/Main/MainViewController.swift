@@ -8,13 +8,26 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.setup()
     }
+}
 
+// MARK: - Setup methods
 
+private extension MainViewController {
+    
+    func setup() {
+        self.navigationController?.isNavigationBarHidden = true
+        self.viewControllers = [self.getUserListViewController()].compactMap({ $0 })
+        self.tabBar.isHidden = (self.viewControllers?.count ?? 0 < 2)
+    }
+    
+    func getUserListViewController() -> UserListViewController? {
+        return UserListBuilder.getView()
+    }
 }
 

@@ -14,6 +14,14 @@
 		571FA54E23109F7B0076FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54D23109F7B0076FCA7 /* Assets.xcassets */; };
 		571FA55123109F7B0076FCA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54F23109F7B0076FCA7 /* LaunchScreen.storyboard */; };
 		571FA55C23109F7B0076FCA7 /* MicroblogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA55B23109F7B0076FCA7 /* MicroblogTests.swift */; };
+		578388692310F170007517F7 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578388682310F170007517F7 /* UserListViewController.swift */; };
+		5783886B2310F19F007517F7 /* UserListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783886A2310F19F007517F7 /* UserListBuilder.swift */; };
+		5783886D2310F27D007517F7 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783886C2310F27D007517F7 /* UserListInteractor.swift */; };
+		578388732310F2E3007517F7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578388722310F2E3007517F7 /* UserModel.swift */; };
+		578388762310FD90007517F7 /* UserListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578388752310FD90007517F7 /* UserListUserCell.swift */; };
+		5783887823110C26007517F7 /* UserListTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783887723110C26007517F7 /* UserListTitleCell.swift */; };
+		5783887B23110D2E007517F7 /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783887A23110D2E007517F7 /* UICollectionView+Dequeue.swift */; };
+		5783887D23110E29007517F7 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5783887C23110E29007517F7 /* UserList.storyboard */; };
 		A674A0425C4FF2349ABA980F /* Pods_Microblog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +47,14 @@
 		571FA55723109F7B0076FCA7 /* MicroblogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroblogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FA55B23109F7B0076FCA7 /* MicroblogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroblogTests.swift; sourceTree = "<group>"; };
 		571FA55D23109F7B0076FCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		578388682310F170007517F7 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		5783886A2310F19F007517F7 /* UserListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListBuilder.swift; sourceTree = "<group>"; };
+		5783886C2310F27D007517F7 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		578388722310F2E3007517F7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		578388752310FD90007517F7 /* UserListUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUserCell.swift; sourceTree = "<group>"; };
+		5783887723110C26007517F7 /* UserListTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTitleCell.swift; sourceTree = "<group>"; };
+		5783887A23110D2E007517F7 /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
+		5783887C23110E29007517F7 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 		6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogTests.release.xcconfig"; path = "Target Support Files/Pods-MicroblogTests/Pods-MicroblogTests.release.xcconfig"; sourceTree = "<group>"; };
 		808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.debug.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.debug.xcconfig"; sourceTree = "<group>"; };
 		83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroblogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,8 +114,10 @@
 		571FA54523109F770076FCA7 /* Microblog */ = {
 			isa = PBXGroup;
 			children = (
+				5783887923110D18007517F7 /* Extensions */,
 				578388652310EC76007517F7 /* Singletons */,
 				578388632310EB27007517F7 /* Modules */,
+				578388702310F2D3007517F7 /* Services */,
 				578388662310ECCA007517F7 /* Resources */,
 			);
 			path = Microblog;
@@ -118,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				578388642310EB3D007517F7 /* Main */,
+				578388672310F0E8007517F7 /* UsersList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -147,6 +166,51 @@
 				571FA55223109F7B0076FCA7 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		578388672310F0E8007517F7 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				578388742310FB53007517F7 /* Cells */,
+				5783886A2310F19F007517F7 /* UserListBuilder.swift */,
+				578388682310F170007517F7 /* UserListViewController.swift */,
+				5783886C2310F27D007517F7 /* UserListInteractor.swift */,
+				5783887C23110E29007517F7 /* UserList.storyboard */,
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		578388702310F2D3007517F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				578388712310F2D9007517F7 /* Models */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		578388712310F2D9007517F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				578388722310F2E3007517F7 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		578388742310FB53007517F7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				578388752310FD90007517F7 /* UserListUserCell.swift */,
+				5783887723110C26007517F7 /* UserListTitleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5783887923110D18007517F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5783887A23110D2E007517F7 /* UICollectionView+Dequeue.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5910E28036E72E0FEBEE6022 /* Pods */ = {
@@ -245,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				571FA55123109F7B0076FCA7 /* LaunchScreen.storyboard in Resources */,
+				5783887D23110E29007517F7 /* UserList.storyboard in Resources */,
 				571FA54E23109F7B0076FCA7 /* Assets.xcassets in Resources */,
 				571FA54C23109F770076FCA7 /* Main.storyboard in Resources */,
 			);
@@ -329,7 +394,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				571FA54923109F770076FCA7 /* MainViewController.swift in Sources */,
+				578388732310F2E3007517F7 /* UserModel.swift in Sources */,
 				571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */,
+				578388762310FD90007517F7 /* UserListUserCell.swift in Sources */,
+				5783886D2310F27D007517F7 /* UserListInteractor.swift in Sources */,
+				5783886B2310F19F007517F7 /* UserListBuilder.swift in Sources */,
+				5783887B23110D2E007517F7 /* UICollectionView+Dequeue.swift in Sources */,
+				578388692310F170007517F7 /* UserListViewController.swift in Sources */,
+				5783887823110C26007517F7 /* UserListTitleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
