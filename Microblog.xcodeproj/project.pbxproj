@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		26730E53A9311A5732894EAE /* Pods_MicroblogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */; };
 		571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA54623109F770076FCA7 /* AppDelegate.swift */; };
-		571FA54923109F770076FCA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA54823109F770076FCA7 /* ViewController.swift */; };
+		571FA54923109F770076FCA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA54823109F770076FCA7 /* MainViewController.swift */; };
 		571FA54C23109F770076FCA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54A23109F770076FCA7 /* Main.storyboard */; };
 		571FA54E23109F7B0076FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54D23109F7B0076FCA7 /* Assets.xcassets */; };
 		571FA55123109F7B0076FCA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54F23109F7B0076FCA7 /* LaunchScreen.storyboard */; };
@@ -31,7 +31,7 @@
 		4639DEF22C68ED9E06C14572 /* Pods-Microblog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.release.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.release.xcconfig"; sourceTree = "<group>"; };
 		571FA54323109F770076FCA7 /* Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Microblog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FA54623109F770076FCA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		571FA54823109F770076FCA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		571FA54823109F770076FCA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		571FA54B23109F770076FCA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		571FA54D23109F7B0076FCA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		571FA55023109F7B0076FCA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,12 +98,9 @@
 		571FA54523109F770076FCA7 /* Microblog */ = {
 			isa = PBXGroup;
 			children = (
-				571FA54623109F770076FCA7 /* AppDelegate.swift */,
-				571FA54823109F770076FCA7 /* ViewController.swift */,
-				571FA54A23109F770076FCA7 /* Main.storyboard */,
-				571FA54D23109F7B0076FCA7 /* Assets.xcassets */,
-				571FA54F23109F7B0076FCA7 /* LaunchScreen.storyboard */,
-				571FA55223109F7B0076FCA7 /* Info.plist */,
+				578388652310EC76007517F7 /* Singletons */,
+				578388632310EB27007517F7 /* Modules */,
+				578388662310ECCA007517F7 /* Resources */,
 			);
 			path = Microblog;
 			sourceTree = "<group>";
@@ -117,6 +114,41 @@
 			path = MicroblogTests;
 			sourceTree = "<group>";
 		};
+		578388632310EB27007517F7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				578388642310EB3D007517F7 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		578388642310EB3D007517F7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				571FA54823109F770076FCA7 /* MainViewController.swift */,
+				571FA54A23109F770076FCA7 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		578388652310EC76007517F7 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				571FA54623109F770076FCA7 /* AppDelegate.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		578388662310ECCA007517F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				571FA54D23109F7B0076FCA7 /* Assets.xcassets */,
+				571FA54F23109F7B0076FCA7 /* LaunchScreen.storyboard */,
+				571FA55223109F7B0076FCA7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5910E28036E72E0FEBEE6022 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +157,6 @@
 				F093845D129F3F7F37E27F36 /* Pods-MicroblogTests.debug.xcconfig */,
 				6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -297,7 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				571FA54923109F770076FCA7 /* ViewController.swift in Sources */,
+				571FA54923109F770076FCA7 /* MainViewController.swift in Sources */,
 				571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDDJKS56T5;
-				INFOPLIST_FILE = Microblog/Info.plist;
+				INFOPLIST_FILE = Microblog/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDDJKS56T5;
-				INFOPLIST_FILE = Microblog/Info.plist;
+				INFOPLIST_FILE = Microblog/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
