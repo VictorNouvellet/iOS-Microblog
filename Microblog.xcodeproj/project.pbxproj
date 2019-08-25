@@ -14,6 +14,9 @@
 		571FA54E23109F7B0076FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54D23109F7B0076FCA7 /* Assets.xcassets */; };
 		571FA55123109F7B0076FCA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571FA54F23109F7B0076FCA7 /* LaunchScreen.storyboard */; };
 		571FA55C23109F7B0076FCA7 /* MicroblogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FA55B23109F7B0076FCA7 /* MicroblogTests.swift */; };
+		573C441F2312518800DC87AA /* JSONPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C441E2312518800DC87AA /* JSONPlaceholder.swift */; };
+		573C44212312535000DC87AA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C44202312535000DC87AA /* UserService.swift */; };
+		573C4423231256A300DC87AA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C4422231256A300DC87AA /* Logger.swift */; };
 		578388692310F170007517F7 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578388682310F170007517F7 /* UserListViewController.swift */; };
 		5783886B2310F19F007517F7 /* UserListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783886A2310F19F007517F7 /* UserListBuilder.swift */; };
 		5783886D2310F27D007517F7 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783886C2310F27D007517F7 /* UserListInteractor.swift */; };
@@ -47,6 +50,9 @@
 		571FA55723109F7B0076FCA7 /* MicroblogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroblogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FA55B23109F7B0076FCA7 /* MicroblogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroblogTests.swift; sourceTree = "<group>"; };
 		571FA55D23109F7B0076FCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		573C441E2312518800DC87AA /* JSONPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholder.swift; sourceTree = "<group>"; };
+		573C44202312535000DC87AA /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		573C4422231256A300DC87AA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		578388682310F170007517F7 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		5783886A2310F19F007517F7 /* UserListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListBuilder.swift; sourceTree = "<group>"; };
 		5783886C2310F27D007517F7 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
@@ -114,8 +120,8 @@
 		571FA54523109F770076FCA7 /* Microblog */ = {
 			isa = PBXGroup;
 			children = (
-				5783887923110D18007517F7 /* Extensions */,
 				578388652310EC76007517F7 /* Singletons */,
+				5783887923110D18007517F7 /* Extensions */,
 				578388632310EB27007517F7 /* Modules */,
 				578388702310F2D3007517F7 /* Services */,
 				578388662310ECCA007517F7 /* Resources */,
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				571FA54623109F770076FCA7 /* AppDelegate.swift */,
+				573C4422231256A300DC87AA /* Logger.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				578388712310F2D9007517F7 /* Models */,
+				573C441E2312518800DC87AA /* JSONPlaceholder.swift */,
+				573C44202312535000DC87AA /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -396,8 +405,11 @@
 				571FA54923109F770076FCA7 /* MainViewController.swift in Sources */,
 				578388732310F2E3007517F7 /* UserModel.swift in Sources */,
 				571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */,
+				573C441F2312518800DC87AA /* JSONPlaceholder.swift in Sources */,
 				578388762310FD90007517F7 /* UserListUserCell.swift in Sources */,
 				5783886D2310F27D007517F7 /* UserListInteractor.swift in Sources */,
+				573C44212312535000DC87AA /* UserService.swift in Sources */,
+				573C4423231256A300DC87AA /* Logger.swift in Sources */,
 				5783886B2310F19F007517F7 /* UserListBuilder.swift in Sources */,
 				5783887B23110D2E007517F7 /* UICollectionView+Dequeue.swift in Sources */,
 				578388692310F170007517F7 /* UserListViewController.swift in Sources */,
