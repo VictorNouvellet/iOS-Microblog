@@ -9,6 +9,10 @@
 import UIKit
 
 final class UserListUserCell: UICollectionViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     func configure(withUser user: UserModel) {
         
     }

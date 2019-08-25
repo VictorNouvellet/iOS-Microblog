@@ -16,5 +16,5 @@ final class UserListInteractor {
     
     // MARK: - Internal vars
     
-    private(set) var users = [UserModel]()
+    private(set) var users = [UserModel].init(repeating: UserModel(), count: 3)
 }

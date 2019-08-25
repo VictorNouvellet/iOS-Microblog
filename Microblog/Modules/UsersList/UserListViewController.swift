@@ -85,7 +85,7 @@ extension UserListViewController: UICollectionViewDelegateFlowLayout {
         case .title:
             return CGSize(width: self.view.bounds.width, height: 90.0)
         case .users:
-            return CGSize(width: self.view.bounds.width, height: 30.0)
+            return CGSize(width: self.view.bounds.width, height: 70.0)
         }
     }
     
