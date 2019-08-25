@@ -50,6 +50,4 @@ extension JSONPlaceholder: TargetType {
     var headers: [String : String]? {
         return [String : String]()
     }
-    
-    
 }
