@@ -39,6 +39,8 @@
 		57D010FD23139F960083BAE9 /* Bundle+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010FB23139F630083BAE9 /* Bundle+Test.swift */; };
 		57D010FF2313A1FD0083BAE9 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010FE2313A1FD0083BAE9 /* UserListRouter.swift */; };
 		57D011012313AB4F0083BAE9 /* Eureka+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D011002313AB4F0083BAE9 /* Eureka+Rx.swift */; };
+		57D011062313FEE10083BAE9 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D011052313FEE10083BAE9 /* PostModel.swift */; };
+		57D011082313FFC90083BAE9 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D011072313FFC90083BAE9 /* AlbumModel.swift */; };
 		A674A0425C4FF2349ABA980F /* Pods_Microblog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		57D010FB23139F630083BAE9 /* Bundle+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Test.swift"; sourceTree = "<group>"; };
 		57D010FE2313A1FD0083BAE9 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
 		57D011002313AB4F0083BAE9 /* Eureka+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eureka+Rx.swift"; sourceTree = "<group>"; };
+		57D011052313FEE10083BAE9 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		57D011072313FFC90083BAE9 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogTests.release.xcconfig"; path = "Target Support Files/Pods-MicroblogTests/Pods-MicroblogTests.release.xcconfig"; sourceTree = "<group>"; };
 		808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.debug.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.debug.xcconfig"; sourceTree = "<group>"; };
 		83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroblogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				578388722310F2E3007517F7 /* UserModel.swift */,
+				57D011052313FEE10083BAE9 /* PostModel.swift */,
+				57D011072313FFC90083BAE9 /* AlbumModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,11 +501,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D011012313AB4F0083BAE9 /* Eureka+Rx.swift in Sources */,
+				57D011062313FEE10083BAE9 /* PostModel.swift in Sources */,
 				571FA54923109F770076FCA7 /* MainViewController.swift in Sources */,
 				57D010F223139E8A0083BAE9 /* UserDetailBuilder.swift in Sources */,
 				57D010F623139EE30083BAE9 /* UserDetailInteractor.swift in Sources */,
 				578388732310F2E3007517F7 /* UserModel.swift in Sources */,
 				571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */,
+				57D011082313FFC90083BAE9 /* AlbumModel.swift in Sources */,
 				573C441F2312518800DC87AA /* JSONPlaceholder.swift in Sources */,
 				578388762310FD90007517F7 /* UserListUserCell.swift in Sources */,
 				5783886D2310F27D007517F7 /* UserListInteractor.swift in Sources */,

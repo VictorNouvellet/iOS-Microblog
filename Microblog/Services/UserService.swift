@@ -27,4 +27,17 @@ class UserService: UserServiceInterface {
             .request(.users)
             .map([UserModel].self)
     }
+    
+    func getPosts(forUserId userId: UserId) -> Single<[PostModel]> {
+        return provider.rx
+            .request(.posts(userId: userId))
+            .map([PostModel].self)
+    }
+    
+    func getAlbums(forUserId userId: UserId) -> Single<[AlbumModel]> {
+        return provider.rx
+            .request(.albums(userId: userId))
+            .map([AlbumModel].self)
+    }
+
 }

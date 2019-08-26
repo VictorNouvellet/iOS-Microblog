@@ -8,11 +8,13 @@
 
 import Foundation
 
+typealias UserId = Int
+
 /// Entity in list retrieved from https://jsonplaceholder.typicode.com/users
 
 struct UserModel: Codable {
     // Variable names are important for snake case decoding strategy
-    let id: Int
+    let id: UserId
     let name: String
     let username: String
     let email: String

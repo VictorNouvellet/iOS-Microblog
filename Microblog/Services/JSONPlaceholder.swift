@@ -11,6 +11,8 @@ import Moya
 
 enum JSONPlaceholder {
     case users
+    case posts(userId: UserId)
+    case albums(userId: UserId)
 }
 
 extension JSONPlaceholder: TargetType {
@@ -26,12 +28,18 @@ extension JSONPlaceholder: TargetType {
         switch self {
         case .users:
             return "/users"
+        case .posts(let userId):
+            return "/users/\(userId)/posts"
+        case .albums(let userId):
+            return "/users/\(userId)/albums"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .users:
+        case .users,
+             .posts,
+             .albums:
             return .get
         }
     }
@@ -42,7 +50,9 @@ extension JSONPlaceholder: TargetType {
     
     var task: Task {
         switch self {
-        case .users:
+        case .users,
+             .posts,
+             .albums:
             return .requestPlain
         }
     }
