@@ -22,6 +22,9 @@ final class UserDetailBuilder {
         interactor.service = service
         interactor.view = view
         view?.interactor = interactor
+        let router = UserDetailRouter()
+        router.view = view
+        view?.router = router
         return view
     }
 }

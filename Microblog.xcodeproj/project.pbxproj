@@ -26,6 +26,7 @@
 		5783887823110C26007517F7 /* UserListTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783887723110C26007517F7 /* UserListTitleCell.swift */; };
 		5783887B23110D2E007517F7 /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783887A23110D2E007517F7 /* UICollectionView+Dequeue.swift */; };
 		5783887D23110E29007517F7 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5783887C23110E29007517F7 /* UserList.storyboard */; };
+		57A54F4523141B2A00FF3FB4 /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F4423141B2A00FF3FB4 /* UserDetailRouter.swift */; };
 		57D010E5231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E4231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift */; };
 		57D010E823127B4F0083BAE9 /* XCTestCase+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E723127B4F0083BAE9 /* XCTestCase+Moya.swift */; };
 		57D010EA23127B7F0083BAE9 /* TestableTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E923127B7F0083BAE9 /* TestableTargetType.swift */; };
@@ -41,6 +42,7 @@
 		57D011012313AB4F0083BAE9 /* Eureka+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D011002313AB4F0083BAE9 /* Eureka+Rx.swift */; };
 		57D011062313FEE10083BAE9 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D011052313FEE10083BAE9 /* PostModel.swift */; };
 		57D011082313FFC90083BAE9 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D011072313FFC90083BAE9 /* AlbumModel.swift */; };
+		57D0110C231402470083BAE9 /* UserDetailPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0110B231402470083BAE9 /* UserDetailPostCell.swift */; };
 		A674A0425C4FF2349ABA980F /* Pods_Microblog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,7 @@
 		5783887723110C26007517F7 /* UserListTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTitleCell.swift; sourceTree = "<group>"; };
 		5783887A23110D2E007517F7 /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
 		5783887C23110E29007517F7 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		57A54F4423141B2A00FF3FB4 /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
 		57D010E4231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONPlaceholder+TestSampleData.swift"; sourceTree = "<group>"; };
 		57D010E723127B4F0083BAE9 /* XCTestCase+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Moya.swift"; sourceTree = "<group>"; };
 		57D010E923127B7F0083BAE9 /* TestableTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableTargetType.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		57D011002313AB4F0083BAE9 /* Eureka+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eureka+Rx.swift"; sourceTree = "<group>"; };
 		57D011052313FEE10083BAE9 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		57D011072313FFC90083BAE9 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		57D0110B231402470083BAE9 /* UserDetailPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPostCell.swift; sourceTree = "<group>"; };
 		6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogTests.release.xcconfig"; path = "Target Support Files/Pods-MicroblogTests/Pods-MicroblogTests.release.xcconfig"; sourceTree = "<group>"; };
 		808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.debug.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.debug.xcconfig"; sourceTree = "<group>"; };
 		83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroblogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,13 +295,23 @@
 		57D010F023139E3C0083BAE9 /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
+				57D0110A231402390083BAE9 /* Cells */,
 				57D010F123139E8A0083BAE9 /* UserDetailBuilder.swift */,
 				57D010F323139EB40083BAE9 /* UserDetailViewController.swift */,
+				57A54F4423141B2A00FF3FB4 /* UserDetailRouter.swift */,
 				57D010F523139EE30083BAE9 /* UserDetailInteractor.swift */,
 				57D010F723139F0B0083BAE9 /* UserDetailViewModel.swift */,
 				57D010F923139F2A0083BAE9 /* UserDetail.storyboard */,
 			);
 			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		57D0110A231402390083BAE9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				57D0110B231402470083BAE9 /* UserDetailPostCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		5910E28036E72E0FEBEE6022 /* Pods */ = {
@@ -501,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D011012313AB4F0083BAE9 /* Eureka+Rx.swift in Sources */,
+				57A54F4523141B2A00FF3FB4 /* UserDetailRouter.swift in Sources */,
 				57D011062313FEE10083BAE9 /* PostModel.swift in Sources */,
 				571FA54923109F770076FCA7 /* MainViewController.swift in Sources */,
 				57D010F223139E8A0083BAE9 /* UserDetailBuilder.swift in Sources */,
@@ -521,6 +536,7 @@
 				5783887B23110D2E007517F7 /* UICollectionView+Dequeue.swift in Sources */,
 				578388692310F170007517F7 /* UserListViewController.swift in Sources */,
 				5783887823110C26007517F7 /* UserListTitleCell.swift in Sources */,
+				57D0110C231402470083BAE9 /* UserDetailPostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

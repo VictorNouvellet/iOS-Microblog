@@ -18,28 +18,46 @@ final class UserDetailInteractor {
     var service: UserService!
     var user: UserModel!
     
-    // MARK: - Internal vars
-    
-    var model: UserDetailViewModel! { didSet { self.didUpdateModel(model) } }
-    
     // MARK: - Private vars
     
+    private var posts = BehaviorSubject<[PostModel]>(value: [])
+    private var albums = BehaviorSubject<[AlbumModel]>(value: [])
     private let disposeBag = DisposeBag()
+    
+    // MARK: - Internal vars
+    
+    var model: Observable<UserDetailViewModel> {
+        return Observable<UserDetailViewModel>.combineLatest(Observable<UserModel>.just(user), self.posts) { user, posts in
+            UserDetailViewModel.init(user: user, posts: posts)
+        }
+    }
 }
 
 // MARK: - Internal methods
 
 extension UserDetailInteractor {
     func onViewDidLoad() {
-        self.model = UserDetailViewModel(user: self.user)
+        self.refreshPosts()
+            .subscribe()
+            .disposed(by: self.disposeBag)
     }
 }
 
 // MARK: - Private methods
 
 private extension UserDetailInteractor {
-    /// Should not be used directly
-    func didUpdateModel(_ newModel: UserDetailViewModel) {
-        self.view.modelSubject.onNext(newModel)
+    func refreshPosts() -> Single<[PostModel]> {
+        return self.fetchPosts()
+            .do(
+                onSuccess: { [weak self] posts in
+                    self?.posts.onNext(posts)
+                }, onError: { [weak self] error in
+                    self?.posts.onNext([])
+                }
+        )
+    }
+    
+    func fetchPosts() -> Single<[PostModel]> {
+        return self.service.getPosts(forUserId: self.user.id)
     }
 }
