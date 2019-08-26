@@ -12,5 +12,7 @@ import Foundation
 
 struct UserModel: Codable {
     // Variable names are important for snake case decoding strategy
-    // TODO
+    let id: Int
+    let name: String
+    let username: String
 }

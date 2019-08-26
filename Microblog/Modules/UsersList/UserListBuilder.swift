@@ -18,6 +18,7 @@ final class UserListBuilder {
     static func getView() -> UserListViewController? {
         let view = self.storyboard.instantiateInitialViewController() as? UserListViewController
         let interactor = UserListInteractor()
+        interactor.service = UserService()
         interactor.view = view
         view?.interactor = interactor
         return view

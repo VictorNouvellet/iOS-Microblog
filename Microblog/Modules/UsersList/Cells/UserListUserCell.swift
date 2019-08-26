@@ -14,6 +14,7 @@ final class UserListUserCell: UICollectionViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     
     func configure(withUser user: UserModel) {
-        
+        self.nameLabel.text = user.name
+        self.usernameLabel.text = user.username
     }
 }

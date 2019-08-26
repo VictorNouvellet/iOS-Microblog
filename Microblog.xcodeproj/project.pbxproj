@@ -30,6 +30,7 @@
 		57D010E823127B4F0083BAE9 /* XCTestCase+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E723127B4F0083BAE9 /* XCTestCase+Moya.swift */; };
 		57D010EA23127B7F0083BAE9 /* TestableTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E923127B7F0083BAE9 /* TestableTargetType.swift */; };
 		57D010EB23127BC20083BAE9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C4422231256A300DC87AA /* Logger.swift */; };
+		57D010EF23134A090083BAE9 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010EE23134A090083BAE9 /* UserListViewModel.swift */; };
 		A674A0425C4FF2349ABA980F /* Pods_Microblog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDABFFDFF81A53567E0555BF /* Pods_Microblog.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		57D010E4231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONPlaceholder+TestSampleData.swift"; sourceTree = "<group>"; };
 		57D010E723127B4F0083BAE9 /* XCTestCase+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Moya.swift"; sourceTree = "<group>"; };
 		57D010E923127B7F0083BAE9 /* TestableTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableTargetType.swift; sourceTree = "<group>"; };
+		57D010EE23134A090083BAE9 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		6E1324CA3265F9F6903634B5 /* Pods-MicroblogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroblogTests.release.xcconfig"; path = "Target Support Files/Pods-MicroblogTests/Pods-MicroblogTests.release.xcconfig"; sourceTree = "<group>"; };
 		808A5B82133B130BA6554938 /* Pods-Microblog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Microblog.debug.xcconfig"; path = "Target Support Files/Pods-Microblog/Pods-Microblog.debug.xcconfig"; sourceTree = "<group>"; };
 		83B0081EB53CB7F0A2835B31 /* Pods_MicroblogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroblogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 				5783886A2310F19F007517F7 /* UserListBuilder.swift */,
 				578388682310F170007517F7 /* UserListViewController.swift */,
 				5783886C2310F27D007517F7 /* UserListInteractor.swift */,
+				57D010EE23134A090083BAE9 /* UserListViewModel.swift */,
 				5783887C23110E29007517F7 /* UserList.storyboard */,
 			);
 			path = UsersList;
@@ -467,6 +470,7 @@
 				573C44212312535000DC87AA /* UserService.swift in Sources */,
 				573C4423231256A300DC87AA /* Logger.swift in Sources */,
 				5783886B2310F19F007517F7 /* UserListBuilder.swift in Sources */,
+				57D010EF23134A090083BAE9 /* UserListViewModel.swift in Sources */,
 				5783887B23110D2E007517F7 /* UICollectionView+Dequeue.swift in Sources */,
 				578388692310F170007517F7 /* UserListViewController.swift in Sources */,
 				5783887823110C26007517F7 /* UserListTitleCell.swift in Sources */,

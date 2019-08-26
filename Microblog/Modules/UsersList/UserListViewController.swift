@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
 
 class UserListViewController: UIViewController {
     
@@ -17,6 +20,10 @@ class UserListViewController: UIViewController {
     // MARK: - Injected vars
     
     var interactor: UserListInteractor!
+    
+    // MARK: - Private vars
+    
+    private let disposeBag = DisposeBag()
     
     // MARK: - Section enum
     
@@ -33,6 +40,7 @@ extension UserListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        self.interactor.onViewDidLoad()
     }
 }
 
@@ -40,39 +48,74 @@ extension UserListViewController {
 
 private extension UserListViewController {
     func setup() {
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        setupCollectionViewDatasource()
+        setupCollectionViewLayoutDelegate()
+        setupCellSelection()
+        setupRefreshControl()
+    }
+    
+    func setupCollectionViewDatasource() {
+        let dataSource = RxCollectionViewSectionedReloadDataSource<UserListSection>(
+            configureCell: { dataSource, collectionView, indexPath, item in
+                switch item {
+                case .title(let title):
+                    let cell: UserListTitleCell = collectionView.dequeueReusableCell(for: indexPath)
+                    cell.configure(withTitle: title)
+                    return cell
+                case .user(let user):
+                    let cell: UserListUserCell = collectionView.dequeueReusableCell(for: indexPath)
+                    cell.configure(withUser: user)
+                    return cell
+                }
+        })
+        
+        self.interactor.model
+            .map { (model: UserListViewModel) -> [UserListSection] in
+                let titleSection = UserListSection(items: [model.title].map({ .title($0) }))
+                let usersSection = UserListSection(items: model.users.map({ .user($0) }))
+                return [titleSection, usersSection]
+            }
+            .bind(to: self.collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+    }
+    
+    func setupCollectionViewLayoutDelegate() {
+        self.collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+    }
+    
+    func setupCellSelection() {
+        self.collectionView.rx.modelSelected(UserListSectionData.self)
+            .subscribe(onNext: { model in
+                switch model {
+                case .title:
+                    break
+                case .user(let user):
+                    log.debug("TODO: display user \(user)")
+                }
+            })
+            .disposed(by: self.disposeBag)
+    }
+    
+    func setupRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.rx
+            .controlEvent(.valueChanged)
+            .asDriver()
+            .flatMapLatest({ _ in return self.interactor.onRefresh() })
+            .map({ _ in return false })
+            .asDriver(onErrorJustReturn: false)
+            .drive(refreshControl.rx.isRefreshing)
+            .disposed(by: self.disposeBag)
+        
+        self.collectionView.refreshControl = refreshControl
     }
 }
 
-// MARK: - UICollectionViewDataSource methods
+// MARK: - Private methods
 
-extension UserListViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let section = Section(rawValue: section) else { return 0 }
-        switch section {
-        case .title:
-            return 1
-        case .users:
-            return self.interactor.users.count
-        }
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Section.allCases.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let section = Section(rawValue: indexPath.section) else { return UICollectionViewCell() }
-        switch section {
-        case .title:
-            let cell: UserListTitleCell = collectionView.dequeueReusableCell(for: indexPath)
-            return cell
-        case .users:
-            let cell: UserListUserCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.configure(withUser: self.interactor.users[indexPath.item])
-            return cell
-        }
+extension UserListViewController {
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
     }
 }
 
@@ -87,12 +130,5 @@ extension UserListViewController: UICollectionViewDelegateFlowLayout {
         case .users:
             return CGSize(width: self.view.bounds.width, height: 70.0)
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let section = Section(rawValue: indexPath.section), section == .users else { return }
-        
-        let user = self.interactor.users[indexPath.item]
-        // TODO
     }
 }

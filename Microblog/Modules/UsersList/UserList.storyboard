@@ -50,6 +50,9 @@
                                             <constraint firstItem="Tbu-xX-ppF" firstAttribute="top" secondItem="pxJ-f8-MX0" secondAttribute="top" id="gmX-WE-Lk1"/>
                                         </constraints>
                                         <size key="customSize" width="375" height="90"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Tbu-xX-ppF" id="a67-EL-qWy"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserListUserCell" id="yFy-FQ-z1T" customClass="UserListUserCell" customModule="Microblog" customModuleProvider="target">
                                         <rect key="frame" x="19.5" y="100" width="375" height="70"/>
@@ -119,59 +122,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faj-PN-TyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-162.31884057971016" y="63.616071428571423"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3JE-KL-WfE">
-            <objects>
-                <viewController id="XOB-ox-Hos" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dc8-AI-I3g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kPr-Om-yiP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Vqi-3T-mAY" detailTextLabel="6u4-Ez-Vf3" style="IBUITableViewCellStyleSubtitle" id="9xN-UF-JbB">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9xN-UF-JbB" id="c7R-w9-4mv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vqi-3T-mAY">
-                                                    <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6u4-Ez-Vf3">
-                                                    <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="kPr-Om-yiP" firstAttribute="leading" secondItem="Yzv-lf-UhM" secondAttribute="leading" id="0su-9j-C3A"/>
-                            <constraint firstItem="kPr-Om-yiP" firstAttribute="top" secondItem="Yzv-lf-UhM" secondAttribute="top" id="EX5-7x-aDc"/>
-                            <constraint firstItem="Yzv-lf-UhM" firstAttribute="trailing" secondItem="kPr-Om-yiP" secondAttribute="trailing" id="kYd-TY-awO"/>
-                            <constraint firstItem="Yzv-lf-UhM" firstAttribute="bottom" secondItem="kPr-Om-yiP" secondAttribute="bottom" id="yGf-hC-qCb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Yzv-lf-UhM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xZY-84-Xx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="682" y="70"/>
         </scene>
     </scenes>
 </document>
