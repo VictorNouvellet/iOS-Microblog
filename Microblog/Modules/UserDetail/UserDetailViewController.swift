@@ -8,12 +8,11 @@
 
 import Foundation
 import UIKit
-import Eureka
 import RxSwift
 import RxCocoa
 import CoreLocation
 
-final class UserDetailViewController: FormViewController {
+final class UserDetailViewController: UIViewController {
     
     // MARK: - Injected vars
     
@@ -27,22 +26,6 @@ final class UserDetailViewController: FormViewController {
     
     var modelSubject = PublishSubject<UserDetailViewModel>()
     
-    // MARK: - Rows
-    
-    var nameRow = LabelRow() { row in
-        row.title = NSLocalizedString("name", comment: "").localizedCapitalized
-        row.value = nil
-    }
-    
-    var usernameRow = LabelRow() { row in
-        row.title = NSLocalizedString("username", comment: "").localizedCapitalized
-        row.value = nil
-    }
-    
-    var emailRow = LabelRow() { row in
-        row.title = NSLocalizedString("email", comment: "").localizedCapitalized
-        row.value = nil
-    }
 }
 
 // MARK: - View lifecycle
@@ -66,23 +49,12 @@ private extension UserDetailViewController {
     func setup() {
         self.navigationController?.isNavigationBarHidden = false
         setupRx()
-        setupForm()
-    }
-    
-    func setupForm() {
-        form
-            +++ Section(NSLocalizedString("User Information", comment: ""))
-            <<< nameRow
-            <<< usernameRow
-            <<< emailRow
     }
     
     func setupRx() {
         self.modelSubject.subscribe(onNext: { [weak self] model in
             guard let self = self else { return }
-            self.nameRow.value = model.user.name
-            self.usernameRow.value = model.user.username
-            self.emailRow.value = model.user.email
+            
             
         }).disposed(by: self.disposeBag)
     }
