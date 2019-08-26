@@ -39,5 +39,11 @@ class UserService: UserServiceInterface {
             .request(.albums(userId: userId))
             .map([AlbumModel].self)
     }
+    
+    func postComment(comment: CommentModel) -> Completable {
+        return provider.rx
+            .request(.postComment(comment: comment))
+            .asCompletable()
+    }
 
 }

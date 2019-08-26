@@ -29,6 +29,15 @@
 		57A54F4523141B2A00FF3FB4 /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F4423141B2A00FF3FB4 /* UserDetailRouter.swift */; };
 		57A54F472314822E00FF3FB4 /* users-1-posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 57A54F462314822E00FF3FB4 /* users-1-posts.json */; };
 		57A54F49231482F300FF3FB4 /* users-1-albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 57A54F48231482F200FF3FB4 /* users-1-albums.json */; };
+		57A54F4C231483F100FF3FB4 /* CommentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F4B231483F100FF3FB4 /* CommentFormViewController.swift */; };
+		57A54F4E231483FC00FF3FB4 /* CommentFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F4D231483FC00FF3FB4 /* CommentFormBuilder.swift */; };
+		57A54F502314840700FF3FB4 /* CommentFormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F4F2314840700FF3FB4 /* CommentFormRouter.swift */; };
+		57A54F522314841200FF3FB4 /* CommentFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F512314841200FF3FB4 /* CommentFormInteractor.swift */; };
+		57A54F542314842300FF3FB4 /* CommentFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F532314842300FF3FB4 /* CommentFormViewModel.swift */; };
+		57A54F562314843200FF3FB4 /* CommentForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A54F552314843200FF3FB4 /* CommentForm.storyboard */; };
+		57A54F58231487CE00FF3FB4 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F57231487CE00FF3FB4 /* CommentModel.swift */; };
+		57A54F5A2314883800FF3FB4 /* posts-1-comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 57A54F592314883800FF3FB4 /* posts-1-comments.json */; };
+		57A54F5C23148AD600FF3FB4 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A54F5B23148AD600FF3FB4 /* Encodable+Dictionary.swift */; };
 		57D010E5231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E4231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift */; };
 		57D010E823127B4F0083BAE9 /* XCTestCase+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E723127B4F0083BAE9 /* XCTestCase+Moya.swift */; };
 		57D010EA23127B7F0083BAE9 /* TestableTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D010E923127B7F0083BAE9 /* TestableTargetType.swift */; };
@@ -85,6 +94,15 @@
 		57A54F4423141B2A00FF3FB4 /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
 		57A54F462314822E00FF3FB4 /* users-1-posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "users-1-posts.json"; path = "Responses/users-1-posts.json"; sourceTree = SOURCE_ROOT; };
 		57A54F48231482F200FF3FB4 /* users-1-albums.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "users-1-albums.json"; path = "Responses/users-1-albums.json"; sourceTree = SOURCE_ROOT; };
+		57A54F4B231483F100FF3FB4 /* CommentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFormViewController.swift; sourceTree = "<group>"; };
+		57A54F4D231483FC00FF3FB4 /* CommentFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFormBuilder.swift; sourceTree = "<group>"; };
+		57A54F4F2314840700FF3FB4 /* CommentFormRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFormRouter.swift; sourceTree = "<group>"; };
+		57A54F512314841200FF3FB4 /* CommentFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFormInteractor.swift; sourceTree = "<group>"; };
+		57A54F532314842300FF3FB4 /* CommentFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFormViewModel.swift; sourceTree = "<group>"; };
+		57A54F552314843200FF3FB4 /* CommentForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentForm.storyboard; sourceTree = "<group>"; };
+		57A54F57231487CE00FF3FB4 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		57A54F592314883800FF3FB4 /* posts-1-comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "posts-1-comments.json"; path = "Responses/posts-1-comments.json"; sourceTree = SOURCE_ROOT; };
+		57A54F5B23148AD600FF3FB4 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
 		57D010E4231277C10083BAE9 /* JSONPlaceholder+TestSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONPlaceholder+TestSampleData.swift"; sourceTree = "<group>"; };
 		57D010E723127B4F0083BAE9 /* XCTestCase+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Moya.swift"; sourceTree = "<group>"; };
 		57D010E923127B7F0083BAE9 /* TestableTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableTargetType.swift; sourceTree = "<group>"; };
@@ -191,9 +209,10 @@
 		573C44252312624900DC87AA /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				573C44262312626500DC87AA /* users.json */,
 				57A54F462314822E00FF3FB4 /* users-1-posts.json */,
 				57A54F48231482F200FF3FB4 /* users-1-albums.json */,
-				573C44262312626500DC87AA /* users.json */,
+				57A54F592314883800FF3FB4 /* posts-1-comments.json */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -204,6 +223,7 @@
 				578388642310EB3D007517F7 /* Main */,
 				578388672310F0E8007517F7 /* UserList */,
 				57D010F023139E3C0083BAE9 /* UserDetail */,
+				57A54F4A231483B700FF3FB4 /* CommentForm */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -266,6 +286,7 @@
 				578388722310F2E3007517F7 /* UserModel.swift */,
 				57D011052313FEE10083BAE9 /* PostModel.swift */,
 				57D011072313FFC90083BAE9 /* AlbumModel.swift */,
+				57A54F57231487CE00FF3FB4 /* CommentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,8 +305,22 @@
 			children = (
 				5783887A23110D2E007517F7 /* UICollectionView+Dequeue.swift */,
 				57D011002313AB4F0083BAE9 /* Eureka+Rx.swift */,
+				57A54F5B23148AD600FF3FB4 /* Encodable+Dictionary.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57A54F4A231483B700FF3FB4 /* CommentForm */ = {
+			isa = PBXGroup;
+			children = (
+				57A54F4D231483FC00FF3FB4 /* CommentFormBuilder.swift */,
+				57A54F4B231483F100FF3FB4 /* CommentFormViewController.swift */,
+				57A54F4F2314840700FF3FB4 /* CommentFormRouter.swift */,
+				57A54F512314841200FF3FB4 /* CommentFormInteractor.swift */,
+				57A54F532314842300FF3FB4 /* CommentFormViewModel.swift */,
+				57A54F552314843200FF3FB4 /* CommentForm.storyboard */,
+			);
+			path = CommentForm;
 			sourceTree = "<group>";
 		};
 		57D010E623127B330083BAE9 /* Common */ = {
@@ -420,6 +455,7 @@
 				5783887D23110E29007517F7 /* UserList.storyboard in Resources */,
 				57D010FA23139F2A0083BAE9 /* UserDetail.storyboard in Resources */,
 				571FA54E23109F7B0076FCA7 /* Assets.xcassets in Resources */,
+				57A54F562314843200FF3FB4 /* CommentForm.storyboard in Resources */,
 				571FA54C23109F770076FCA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +467,7 @@
 				57A54F472314822E00FF3FB4 /* users-1-posts.json in Resources */,
 				57A54F49231482F300FF3FB4 /* users-1-albums.json in Resources */,
 				573C44272312626500DC87AA /* users.json in Resources */,
+				57A54F5A2314883800FF3FB4 /* posts-1-comments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,21 +559,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A54F542314842300FF3FB4 /* CommentFormViewModel.swift in Sources */,
 				57D011012313AB4F0083BAE9 /* Eureka+Rx.swift in Sources */,
 				57A54F4523141B2A00FF3FB4 /* UserDetailRouter.swift in Sources */,
 				57D011062313FEE10083BAE9 /* PostModel.swift in Sources */,
 				571FA54923109F770076FCA7 /* MainViewController.swift in Sources */,
+				57A54F58231487CE00FF3FB4 /* CommentModel.swift in Sources */,
 				57D010F223139E8A0083BAE9 /* UserDetailBuilder.swift in Sources */,
 				57D010F623139EE30083BAE9 /* UserDetailInteractor.swift in Sources */,
 				578388732310F2E3007517F7 /* UserModel.swift in Sources */,
 				571FA54723109F770076FCA7 /* AppDelegate.swift in Sources */,
+				57A54F522314841200FF3FB4 /* CommentFormInteractor.swift in Sources */,
+				57A54F4C231483F100FF3FB4 /* CommentFormViewController.swift in Sources */,
 				57D011082313FFC90083BAE9 /* AlbumModel.swift in Sources */,
+				57A54F5C23148AD600FF3FB4 /* Encodable+Dictionary.swift in Sources */,
 				573C441F2312518800DC87AA /* JSONPlaceholder.swift in Sources */,
 				578388762310FD90007517F7 /* UserListUserCell.swift in Sources */,
 				5783886D2310F27D007517F7 /* UserListInteractor.swift in Sources */,
 				573C44212312535000DC87AA /* UserService.swift in Sources */,
+				57A54F502314840700FF3FB4 /* CommentFormRouter.swift in Sources */,
 				57D010FF2313A1FD0083BAE9 /* UserListRouter.swift in Sources */,
 				57D010F823139F0B0083BAE9 /* UserDetailViewModel.swift in Sources */,
+				57A54F4E231483FC00FF3FB4 /* CommentFormBuilder.swift in Sources */,
 				573C4423231256A300DC87AA /* Logger.swift in Sources */,
 				5783886B2310F19F007517F7 /* UserListBuilder.swift in Sources */,
 				57D010EF23134A090083BAE9 /* UserListViewModel.swift in Sources */,

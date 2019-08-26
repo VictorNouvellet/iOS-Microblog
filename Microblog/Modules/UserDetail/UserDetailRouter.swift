@@ -13,6 +13,7 @@ class UserDetailRouter {
     weak var view: UserDetailViewController!
     
     func pushPostComment(forPost post: PostModel) {
-        log.debug("TODO: Display view with ability to comment post \(post)")
+        guard let commentFormVC = CommentFormBuilder.getView(post: post) else { return }
+        self.view.navigationController?.pushViewController(commentFormVC, animated: true)
     }
 }

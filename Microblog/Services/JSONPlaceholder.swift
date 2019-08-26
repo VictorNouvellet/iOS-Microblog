@@ -13,6 +13,7 @@ enum JSONPlaceholder {
     case users
     case posts(userId: UserId)
     case albums(userId: UserId)
+    case postComment(comment: CommentModel)
 }
 
 extension JSONPlaceholder: TargetType {
@@ -32,6 +33,8 @@ extension JSONPlaceholder: TargetType {
             return "/users/\(userId)/posts"
         case .albums(let userId):
             return "/users/\(userId)/albums"
+        case .postComment:
+            return "/comments"
         }
     }
     
@@ -41,6 +44,8 @@ extension JSONPlaceholder: TargetType {
              .posts,
              .albums:
             return .get
+        case .postComment:
+            return .post
         }
     }
     
@@ -54,10 +59,21 @@ extension JSONPlaceholder: TargetType {
              .posts,
              .albums:
             return .requestPlain
+        case .postComment(comment: let comment):
+            var commentDict: [String: Any] = comment.asDictionary() ?? [:]
+            commentDict.removeValue(forKey: "id")
+            return .requestParameters(parameters: commentDict, encoding: JSONEncoding.default)
         }
     }
     
     var headers: [String : String]? {
-        return [String : String]()
+        switch self {
+        case .users,
+             .posts,
+             .albums:
+            return [String : String]()
+        case .postComment:
+            return ["Content-type": "application/json; charset=UTF-8"]
+        }
     }
 }

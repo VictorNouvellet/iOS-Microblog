@@ -27,10 +27,6 @@ final class UserDetailViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     
-    // MARK: - Internal vars
-    
-    var modelSubject = PublishSubject<UserDetailViewModel>()
-    
     // MARK: - Section enum
     
     enum Section: Int, CaseIterable {
@@ -48,8 +44,9 @@ extension UserDetailViewController {
         self.interactor.onViewDidLoad()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
 }
 
@@ -57,7 +54,6 @@ extension UserDetailViewController {
 
 private extension UserDetailViewController {
     func setup() {
-        self.navigationController?.isNavigationBarHidden = false
         setupCollectionViewDatasource()
         setupCollectionViewLayoutDelegate()
         setupCellSelection()

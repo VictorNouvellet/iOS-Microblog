@@ -43,6 +43,11 @@ extension UserListViewController {
         self.setup()
         self.interactor.onViewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }
 
 // MARK: - Setup methods
