@@ -15,7 +15,7 @@ protocol TestableTargetType: TargetType {
 
 extension TestableTargetType {
     func stubbedResponse(_ resource: String) -> Data {
-        let bundle = Bundle(identifier: "com.victor.nouvellet.MicroblogTests")!
+        let bundle = Bundle.test
         guard let path = bundle.path(forResource: resource, ofType: "json") else {
             log.severe("No resource found with name '\(resource)'")
             return Data()

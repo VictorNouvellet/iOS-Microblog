@@ -21,6 +21,9 @@ final class UserListBuilder {
         interactor.service = UserService()
         interactor.view = view
         view?.interactor = interactor
+        let router = UserListRouter()
+        router.view = view
+        view?.router = router
         return view
     }
 }

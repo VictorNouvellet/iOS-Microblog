@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class UserListViewController: UIViewController {
+final class UserListViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -20,6 +20,7 @@ class UserListViewController: UIViewController {
     // MARK: - Injected vars
     
     var interactor: UserListInteractor!
+    var router: UserListRouter!
     
     // MARK: - Private vars
     
@@ -90,7 +91,7 @@ private extension UserListViewController {
                 case .title:
                     break
                 case .user(let user):
-                    log.debug("TODO: display user \(user)")
+                    self.router.pushUserDetail(forUser: user)
                 }
             })
             .disposed(by: self.disposeBag)
@@ -108,14 +109,6 @@ private extension UserListViewController {
             .disposed(by: self.disposeBag)
         
         self.collectionView.refreshControl = refreshControl
-    }
-}
-
-// MARK: - Private methods
-
-extension UserListViewController {
-    func handleRefresh(_ refreshControl: UIRefreshControl) {
-        
     }
 }
 

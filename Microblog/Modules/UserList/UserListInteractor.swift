@@ -24,7 +24,14 @@ final class UserListInteractor {
     
     // MARK: - Internal vars
     
-    lazy var model: Observable<UserListViewModel> = users.map({ UserListViewModel(title: "Users", users: $0) })
+    var model: Observable<UserListViewModel> {
+        return users.map({ usersModels in
+            UserListViewModel(
+                title: NSLocalizedString("users", comment: "").localizedCapitalized,
+                users: usersModels
+            )
+        })
+    }
 }
 
 // MARK: - Internal methods
