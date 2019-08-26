@@ -16,6 +16,10 @@ extension JSONPlaceholder: TestableTargetType {
         switch self {
         case .users:
             return stubbedResponse("users")
+        case .posts:
+            return stubbedResponse("users-1-posts")
+        case .albums:
+            return stubbedResponse("users-1-albums")
         }
     }
 }

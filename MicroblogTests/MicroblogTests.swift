@@ -35,4 +35,16 @@ class MicroblogTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertEqual(try UserService(provider: stubbingProvider).getUsers().toBlocking().single().count, 10)
     }
+    
+    func testGetPostsForUser() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(try UserService(provider: stubbingProvider).getPosts(forUserId: 1).toBlocking().single().count, 100)
+    }
+    
+    func testGetAlbumsForUser() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(try UserService(provider: stubbingProvider).getAlbums(forUserId: 1).toBlocking().single().count, 100)
+    }
 }
