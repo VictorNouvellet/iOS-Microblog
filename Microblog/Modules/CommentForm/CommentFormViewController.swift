@@ -35,7 +35,7 @@ class CommentFormViewController: FormViewController {
     }
     
     let postBodyRow = TextAreaRow(){ row in
-        row.title = "Body"
+        row.title = NSLocalizedString("Body", comment: "")
         row.placeholder = NSLocalizedString("Loading...", comment: "")
         row.value = nil
         row.disabled = true
@@ -55,7 +55,7 @@ class CommentFormViewController: FormViewController {
     }
     
     let commentEmailRow = EmailRow(){ row in
-        row.title = "Email"
+        row.title = NSLocalizedString("Email", comment: "")
         row.placeholder = NSLocalizedString("Your email", comment: "")
         row.value = nil
         row.add(rule: RuleRequired())
@@ -106,48 +106,88 @@ extension CommentFormViewController {
 private extension CommentFormViewController {
     func setup() {
         setupForm()
+        setupRx()
     }
     
     func setupForm() {
         sendButton.onCellSelection({ [weak self] (cell, row) in
+            cell.isUserInteractionEnabled = false
+            row.disabled = true
+            row.evaluateDisabled()
             self?.sendButtonTapped()
         })
         
         form
-            +++ Section("Post")
+            +++ Section(NSLocalizedString("Post", comment: ""))
             <<< postTitleRow
             <<< postBodyRow
-            +++ Section("Comment")
+            +++ Section(NSLocalizedString("Comment", comment: ""))
             <<< commentNameRow
             <<< commentEmailRow
             <<< commentBodyRow
             <<< sendButton
+    }
+    
+    func setupRx() {
+        self.interactor.modelSubject
+            .subscribe(onNext: { [weak self] model in
+                self?.updateView(withModel: model)
+            })
+            .disposed(by: self.disposeBag)
     }
 }
 
 // MARK: - Private methods
 
 private extension CommentFormViewController {
+    func updateView(withModel model: CommentFormViewModel) {
+        self.postTitleRow.value = model.post.title
+        self.postBodyRow.value = model.post.body
+    }
+    
     func sendButtonTapped() {
-        let rowsToValidate = [commentNameRow, commentEmailRow, commentBodyRow]
-        rowsToValidate.forEach({ $0.validate() })
-        guard rowsToValidate.map({ $0.isValid }).reduce(true, { $0 && $1 }) else { return }
-        guard let name = commentNameRow.value, name.isEmpty == false else { return }
-        guard let email = commentEmailRow.value, email.isEmpty == false else { return }
-        guard let body = commentBodyRow.value, body.isEmpty == false else { return }
-        self.interactor.onSendComment(name: name, email: email, body: body)
-            .subscribe(
-                onCompleted: { [weak self] in
-                    self?.showAlert(success: true)
-                },
-                onError: { [weak self] error in
-                    self?.showAlert(success: false, message: error.localizedDescription)
-                }
-            )
+        self.validate()
+            .flatMapCompletable { [weak self] validatedInfo -> Completable in
+                guard let self = self else { return Completable.empty() }
+                return self.interactor
+                    .onSendComment(name: validatedInfo.name, email: validatedInfo.email, body: validatedInfo.body)
+                    .andThen(Single<(Bool, String?)>.just((true, nil)))
+                    .catchError({ error in return Single<(Bool, String?)>.just((false, error.localizedDescription)) })
+                    .flatMapCompletable({ [weak self] result in
+                        guard let self = self else { return Completable.empty() }
+                        return self.showAlert(success: result.0, message: result.1).asCompletable()
+                    })
+            }
+            .do(onDispose: { [weak self] in
+                self?.sendButton.disabled = false
+                self?.sendButton.evaluateDisabled()
+                self?.sendButton.cell.isUserInteractionEnabled = true
+            })
+            .subscribe(onCompleted: { [weak self] in
+                self?.commentBodyRow.value = nil
+            })
             .disposed(by: self.disposeBag)
     }
     
-    func showAlert(success: Bool, message: String? = nil) {
+    func validate() -> Single<(name: String, email: String, body: String)> {
+        let validationErrors = form.validate(includeDisabled: false)
+        guard validationErrors.isEmpty else {
+            return Single<(name: String, email: String, body: String)>.error(CommentFormError.validationErrors(validationErrors))
+        }
+        // Never trust the user input (or Eureka in this case)
+        guard let name = commentNameRow.value, name.isEmpty == false else {
+            return Single<(name: String, email: String, body: String)>.error(CommentFormError.emptyName)
+        }
+        guard let email = commentEmailRow.value, email.isEmpty == false else {
+            return Single<(name: String, email: String, body: String)>.error(CommentFormError.emptyEmail)
+        }
+        guard let body = commentBodyRow.value, body.isEmpty == false else {
+            return Single<(name: String, email: String, body: String)>.error(CommentFormError.emptyBody)
+        }
+        return Single<(name: String, email: String, body: String)>.just((name: name, email: email, body: body))
+    }
+    
+    func showAlert(success: Bool, message: String? = nil, handler: ((UIAlertAction) -> Void)? = nil) {
         let title: String
         if success {
             title = NSLocalizedString("Comment sent successfully!", comment: "")
@@ -155,8 +195,24 @@ private extension CommentFormViewController {
             title = NSLocalizedString("Error sending the comment", comment: "")
         }
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: handler)
         alertController.addAction(defaultAction)
         present(alertController, animated: true)
     }
+    
+    func showAlert(success: Bool, message: String? = nil) -> Single<UIAlertAction> {
+        return Single<UIAlertAction>.create { single in
+            self.showAlert(success: success, message: message, handler: { alert in
+                single(.success(alert))
+            })
+            return Disposables.create()
+        }
+    }
+}
+
+enum CommentFormError: Error {
+    case emptyName
+    case emptyEmail
+    case emptyBody
+    case validationErrors([ValidationError])
 }

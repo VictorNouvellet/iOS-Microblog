@@ -21,13 +21,18 @@ final class CommentFormInteractor {
     // MARK: - Private vars
     
     private let disposeBag = DisposeBag()
+    
+    // MARK: - Internal vars
+    
+    var modelSubject = PublishSubject<CommentFormViewModel>()
 }
 
 // MARK: - Internal methods
 
 extension CommentFormInteractor {
     func onViewDidLoad() {
-        // Nothing to do
+        let model = CommentFormViewModel(post: self.post)
+        modelSubject.onNext(model)
     }
     
     func onSendComment(name: String, email: String, body: String) -> Completable {
