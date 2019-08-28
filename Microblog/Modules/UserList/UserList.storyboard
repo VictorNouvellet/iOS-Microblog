@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UPv-mM-gsB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rjz-s7-ZeG">
                                     <size key="itemSize" width="50" height="50"/>
@@ -130,7 +130,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UPv-mM-gsB" firstAttribute="leading" secondItem="Tch-l0-prn" secondAttribute="leading" id="MNt-PQ-6U8"/>
-                            <constraint firstItem="Tch-l0-prn" firstAttribute="bottom" secondItem="UPv-mM-gsB" secondAttribute="bottom" id="QSZ-lq-tfk"/>
+                            <constraint firstAttribute="bottom" secondItem="UPv-mM-gsB" secondAttribute="bottom" id="QSZ-lq-tfk"/>
                             <constraint firstItem="Tch-l0-prn" firstAttribute="trailing" secondItem="UPv-mM-gsB" secondAttribute="trailing" id="Tfy-dB-wM7"/>
                             <constraint firstItem="UPv-mM-gsB" firstAttribute="top" secondItem="Tch-l0-prn" secondAttribute="top" id="tfF-wI-4R5"/>
                         </constraints>
