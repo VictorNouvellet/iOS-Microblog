@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UPv-mM-gsB">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rjz-s7-ZeG">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rjz-s7-ZeG">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,13 +41,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNr-Y8-ekc">
+                                                    <rect key="frame" x="0.0" y="89.5" width="375" height="0.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="2jc-dE-xID"/>
+                                                        <constraint firstAttribute="height" constant="0.5" id="yP6-k7-ihR"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QNr-Y8-ekc" secondAttribute="trailing" id="2X3-eu-lMZ"/>
                                             <constraint firstAttribute="bottom" secondItem="Tbu-xX-ppF" secondAttribute="bottom" id="4Lb-af-VgW"/>
                                             <constraint firstItem="Tbu-xX-ppF" firstAttribute="leading" secondItem="pxJ-f8-MX0" secondAttribute="leading" constant="20" id="PWg-Cn-0OG"/>
+                                            <constraint firstAttribute="bottom" secondItem="QNr-Y8-ekc" secondAttribute="bottom" id="Ttx-yw-LRd"/>
                                             <constraint firstAttribute="trailing" secondItem="Tbu-xX-ppF" secondAttribute="trailing" constant="20" id="dre-DS-hY6"/>
                                             <constraint firstItem="Tbu-xX-ppF" firstAttribute="top" secondItem="pxJ-f8-MX0" secondAttribute="top" id="gmX-WE-Lk1"/>
+                                            <constraint firstItem="QNr-Y8-ekc" firstAttribute="leading" secondItem="pxJ-f8-MX0" secondAttribute="leading" id="ocT-3e-zok"/>
                                         </constraints>
                                         <size key="customSize" width="375" height="90"/>
                                         <connections>
@@ -55,7 +66,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserListUserCell" id="yFy-FQ-z1T" customClass="UserListUserCell" customModule="Microblog" customModuleProvider="target">
-                                        <rect key="frame" x="19.5" y="100" width="375" height="70"/>
+                                        <rect key="frame" x="19.5" y="90" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -90,12 +101,22 @@
                                                         <constraint firstAttribute="bottom" secondItem="wl8-u6-dL4" secondAttribute="bottom" id="tnA-Ew-qMg"/>
                                                     </constraints>
                                                 </view>
+                                                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCJ-UR-lAH">
+                                                    <rect key="frame" x="0.0" y="69.5" width="375" height="0.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="xqm-xP-6mK"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uCJ-UR-lAH" secondAttribute="trailing" id="1bD-vY-tUc"/>
+                                            <constraint firstAttribute="bottom" secondItem="uCJ-UR-lAH" secondAttribute="bottom" id="9hL-Lz-a9q"/>
                                             <constraint firstAttribute="trailing" secondItem="ADa-qf-EFG" secondAttribute="trailing" id="DhB-8G-rjO"/>
                                             <constraint firstItem="ADa-qf-EFG" firstAttribute="centerY" secondItem="yFy-FQ-z1T" secondAttribute="centerY" id="dYE-Ji-cRn"/>
                                             <constraint firstItem="ADa-qf-EFG" firstAttribute="leading" secondItem="yFy-FQ-z1T" secondAttribute="leading" constant="12" id="edI-MG-uLv"/>
+                                            <constraint firstItem="uCJ-UR-lAH" firstAttribute="leading" secondItem="yFy-FQ-z1T" secondAttribute="leading" id="o8U-UV-XB3"/>
                                         </constraints>
                                         <size key="customSize" width="375" height="70"/>
                                         <connections>

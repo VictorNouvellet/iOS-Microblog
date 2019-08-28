@@ -20,6 +20,8 @@ class UserDetailPostCell: UICollectionViewCell {
         }
     }
     
+    
+    
     func configure(withPost post: PostModel) {
         self.titleLabel.text = post.title
         self.previewLabel.text = post.body

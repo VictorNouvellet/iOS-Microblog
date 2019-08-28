@@ -108,7 +108,7 @@ extension UserDetailViewController: UICollectionViewDelegateFlowLayout {
         guard let section = Section(rawValue: indexPath.section) else { return .zero }
         switch section {
         case .posts:
-            return CGSize(width: self.view.bounds.width, height: 90.0)
+            return CGSize(width: self.view.bounds.width, height: 70.0)
         }
     }
 }

@@ -124,7 +124,7 @@ extension UserListViewController: UICollectionViewDelegateFlowLayout {
         guard let section = Section(rawValue: indexPath.section) else { return .zero }
         switch section {
         case .title:
-            return CGSize(width: self.view.bounds.width, height: 90.0)
+            return CGSize(width: self.view.bounds.width, height: 80.0)
         case .users:
             return CGSize(width: self.view.bounds.width, height: 70.0)
         }
