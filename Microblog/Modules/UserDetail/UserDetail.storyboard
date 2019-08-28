@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ilC-2V-lkF">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ilC-2V-lkF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y9b-uf-u1m">
                                     <size key="itemSize" width="414" height="90"/>
@@ -76,6 +75,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ilC-2V-lkF" firstAttribute="leading" secondItem="pfJ-Ax-2jr" secondAttribute="leading" id="Bfa-NA-zca"/>
+                            <constraint firstItem="ilC-2V-lkF" firstAttribute="trailing" secondItem="pfJ-Ax-2jr" secondAttribute="trailing" id="VVr-GB-vdl"/>
+                            <constraint firstItem="ilC-2V-lkF" firstAttribute="top" secondItem="DYQ-RK-VRs" secondAttribute="top" id="g0D-Iz-NLb"/>
+                            <constraint firstAttribute="bottom" secondItem="ilC-2V-lkF" secondAttribute="bottom" id="sJp-kd-9HA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pfJ-Ax-2jr"/>
                     </view>
                     <connections>
