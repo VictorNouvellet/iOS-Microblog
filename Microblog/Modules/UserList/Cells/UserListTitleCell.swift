@@ -9,6 +9,7 @@
 import UIKit
 
 final class UserListTitleCell: UICollectionViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     func configure(withTitle title: String) {

@@ -82,7 +82,7 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="wl8-u6-dL4" firstAttribute="leading" secondItem="ADa-qf-EFG" secondAttribute="leading" id="9rd-lE-iXT"/>
                                                         <constraint firstItem="wl8-u6-dL4" firstAttribute="top" secondItem="ADa-qf-EFG" secondAttribute="top" id="acy-m1-bpf"/>

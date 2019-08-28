@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 
 class UserDetailPostCell: UICollectionViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var previewLabel: UILabel!
+    
+    override var isHighlighted: Bool {
+        willSet {
+            contentView.backgroundColor = newValue ? .lightGray : .white
+        }
+    }
     
     func configure(withPost post: PostModel) {
         self.titleLabel.text = post.title
