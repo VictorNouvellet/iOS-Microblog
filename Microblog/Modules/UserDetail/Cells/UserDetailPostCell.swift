@@ -13,11 +13,6 @@ class UserDetailPostCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var previewLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.previewLabel.lineBreakMode = .byWordWrapping
-    }
-    
     func configure(withPost post: PostModel) {
         self.titleLabel.text = post.title
         self.previewLabel.text = post.body
